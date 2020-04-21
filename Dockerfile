@@ -6,7 +6,7 @@ ARG AZURE_CLI_VERSION=2.4.0
 ARG TERRAFORM_VERSION=0.12.23
 
 RUN apt-get update \
-    && apt-get install -y curl unzip \
+    && apt-get install -y curl git unzip \
     && rm -rf /var/lib/apt/lists/*
 
 # Setup build arguments with default versions
