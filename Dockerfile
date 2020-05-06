@@ -6,7 +6,7 @@ ARG AZURE_CLI_VERSION=2.4.0
 ARG TERRAFORM_VERSION=0.12.23
 
 RUN apt-get update \
-    && apt-get install -y curl git unzip \
+    && apt-get install -y curl unzip \
     && rm -rf /var/lib/apt/lists/*
 
 # Setup build arguments with default versions
@@ -24,6 +24,7 @@ RUN apt-get update -qq \
       curl \
       ca-certificates \
       lsb-release \
+      git \
       gnupg \
     && \
     echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ bionic main" | tee /etc/apt/sources.list.d/azure-cli.list \
