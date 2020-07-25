@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 LABEL "maintainer"="liksi <ops@liksi.fr>"
 # Setup build arguments with default versions
-ARG AZURE_CLI_VERSION=2.4.0
+ARG AZURE_CLI_VERSION=2.9.1
 ARG TERRAFORM_VERSION=0.12.23
 
 RUN apt-get update \
